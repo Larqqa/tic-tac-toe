@@ -1,27 +1,39 @@
 <template>
-  <Board />
+  <List />
 </template>
 
 <script>
-import Board from './components/Board.vue'
+  import List from './views/List.vue';
 
-export default {
-  name: 'App',
-  components: {
-    Board
-  },
-}
+  export default {
+    name: 'App',
+    components: {
+      List
+    },
+  }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin-top: 60px;
+  html {
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-  display: flex;
-  justify-content: center;
-}
+  button {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+
+    transition: background-color .1s ease-in-out;
+  }
+
+  input {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+  }
+
+  button:active {
+    transition: none;
+    background-color: #00ff88;
+  }
 </style>
